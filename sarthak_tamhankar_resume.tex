@@ -1,0 +1,181 @@
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{20pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Sarthak Tamhankar} & \href{mailto:sarthakt09@gmail.com} {\raisebox{-0.05\height}\faEnvelope \ sarthakt09@gmail.com} \\ [4pt]
+  \href{https://github.com/SuperS-1}{\raisebox{-0.05\height}\faGithub\ SuperS-1} \ $|$ \
+  \href{https://linkedin.com/in/Sarthak-T}{\raisebox{-0.05\height}\faLinkedin\ Sarthak-T} \ &
+  \href{tel:+919167448930}{\raisebox{-0.05\height}\faMobile \ +91 9167448930} \\
+\end{tabular*}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+
+2019 - 2023 \hspace{0.1cm} \textbf{Bachelor of Engineering} \hfill \hspace{4.7cm} \textbf{Atharva College of Engineering} \\ [3.75pt]
+
+\hspace{2.37cm} Information Technology \hfill (GPA: 9.05) \\ [3.75pt]
+
+2017 - 2019 \hspace{0.1cm} \textbf{Class 12th HSC Board} \hfill  \textbf{Shri T. P. Bhatia College of Science} \\ [3.75pt]
+
+\hspace{2.37cm} Computer Science \hfill (Percent: 61.85) \\ [3.75pt]
+
+2016 - 2017 \hspace{0.1cm} \textbf{Class 10th SSC Board} \hfill  \textbf{Veer Bhagat Singh Vidyalaya} \\ [3.75pt]
+
+\hspace \hfill (Percent: 94.60) \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Languages} &  \normalsize{Python, C/C++, HTML/CSS, JavaScript}\\ [3.75pt]
+\textbf{Frameworks}  &  \normalsize{ReactJS, Flask, Material-UI}\\ [3.75pt]
+\textbf{Libraries}  &  \normalsize{Pandas, NumPy, Matplotlib, Scikit-learn}\\ [3.75pt]
+\textbf{Developer Tools}  &  \normalsize{VS Code, IntelliJ, Git, Docker, Jenkins}\\ 
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Experience
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Web Development \& Designing Intern, The Sparks Foundation} & \hfill Jul 2022 - Aug 2022 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item Developed a basic banking system using JavaScript, CSS, PHP and MySQL
+\end{itemize}
+\end{minipage}
+}\\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Web Development Intern, LetsGrowMore} & \hfill Aug 2022 - Sep 2022 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item Developed a To-do list application and a Calculator using HTML, CSS and JavaScript
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{The Original Farm E-commerce Site} & \hfill \href{https://some-link.com}{} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item Built a full-stack website to allow farmers to directly sell organic food to customers
+        \item Developed using ReactJS, Bootstrap and Material UI
+    \end{itemize}
+    \end{minipage}
+}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Flight Price Prediction} & \hfill \href{https://some-link.com}{} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item Takes in departure date \& time, arrival date \& time, source, destination, total stops and airline as input and returns the \textbf{predicted flight fare}
+        \item Built using \textbf{Random Forest Regression}
+        \item Has an accuracy of \textbf{80\%} on test set
+        \item Developed using Flask and Python libraries like Pandas, Numpy and Matplotlib
+    \end{itemize}
+    \end{minipage}
+}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	HONOURS
+%----------------------------------------------------------------------------------------
+\section{Honours}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Scored 550 in GAIT All India Open Online Program} & \hfill \hspace{6.7cm}2023 \\[3.75pt]
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
